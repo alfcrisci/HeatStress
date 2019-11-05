@@ -85,7 +85,7 @@ calZenith <- function(dates,lon,lat, hour=FALSE){
   
   # Calculate the zenith angle
   SZARad <- acos(CosZen)  
-  SZA <- 90-radToDeg(SZARad)
+  SZA <- radToDeg(pi-SZARad)
   
   return(SZA)
 }
