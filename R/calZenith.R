@@ -87,5 +87,5 @@ calZenith <- function(dates,lon,lat, hour=FALSE){
   SZARad <- acos(CosZen)  
   SZA <- radToDeg(SZARad)
   
-  return(SZA)
+  return(ifelse(SZA>0,90-SZA,SZA))
 }
